@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Delay Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Flight Delay Prediction</h1>
+    <form action="/result" method="post">
+        <h1>Flight Delay Prediction</h1>
+        <label for="fno">Enter Flight Number:</label>
+        <input type="text" id="fno" name="fno" required><br><br>
+
+        <label for="month">Month:</label>
+        <input type="number" id="month" name="month" required><br><br>
+
+        <label for="daym">Day of Month:</label>
+        <input type="number" id="daym" name="daym" required><br><br>
+
+        <label for="dayw">Day of Week:</label>
+        <input type="number" id="dayw" name="dayw" required><br><br>
+
+        <label for="sdt">Scheduled Departure Time:</label>
+        <input type="number" id="sdt" name="sdt" required><br><br>
+
+        <label for="sat">Scheduled Arrival Time:</label>
+        <input type="number" id="sat" name="sat" required><br><br>
+
+        <label for="adt">Actual Departure Time:</label>
+        <input type="number" id="adt" name="adt" required><br><br>
+
+        <label for="origin">Origin:</label>
+        <select id="origin" name="origin">
+            <option value="SEA">SEA</option>
+            <option value="MSP">MSP</option>
+            <option value="DTW">DTW</option>
+            <option value="ATL">ATL</option>
+            <option value="JFK">JFK</option>
+        </select><br><br>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination">
+            <option value="SEA">SEA</option>
+            <option value="MSP">MSP</option>
+            <option value="DTW">DTW</option>
+            <option value="ATL">ATL</option>
+            <option value="JFK">JFK</option>
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+
+
+
+</body>
+
+</html>
